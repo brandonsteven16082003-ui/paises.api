@@ -1,0 +1,73 @@
+:root {
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  color: #e5eefb;
+  background: #070b16;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --color-text: #e5eefb;
+  --color-muted: #91a1bb;
+  --color-accent: #50e3c2;
+  --color-accent-blue: #70a7ff;
+  --color-surface: rgba(15, 24, 43, 0.82);
+  --color-border: rgba(143, 171, 214, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% -25%, rgba(32, 90, 145, 0.3), transparent 55%),
+    #070b16;
+}
+
+body::before {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(121, 160, 215, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(121, 160, 215, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  content: "";
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+  pointer-events: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
